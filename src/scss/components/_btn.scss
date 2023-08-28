@@ -1,0 +1,38 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.625rem;
+  font-weight: 450;
+  line-height: 1.5;
+
+  &__login {
+    background-color: #fff;
+    color: #454545;
+    border: 0.0625rem solid #B7B7B7;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: background-color .3s ease-in, color .3s ease-in, opacity .3s ease-in;
+
+    &:hover,
+    &:focus {
+      background-color: #181818;
+      color: #fff;
+      opacity: 0.5;
+    }
+  }
+
+  &__signup {
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #B7B7B7;
+    background-color: #181818;
+    color: #fff;
+    transition: opacity .3s ease-in;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}

@@ -50,6 +50,13 @@
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/../fonts/CircularStd-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -164,5 +171,74 @@ a {
 }
 
 .header {
-  padding: 16px 0;
+  padding: 1.5rem 0;
+}
+.header__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4375rem;
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 900;
+  white-space: nowrap;
+  margin-right: 0.9375rem;
+}
+.header__btn {
+  justify-self: end;
+}
+
+.nav__list {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 0.9375rem;
+}
+.nav__item {
+  color: var(--text-color);
+  font-weight: 450;
+  line-height: 1.5;
+}
+.nav__item a {
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+.nav__item a:hover, .nav__item a.active {
+  color: #35AFF4;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.625rem;
+  font-weight: 450;
+  line-height: 1.5;
+}
+.btn__login {
+  background-color: #fff;
+  color: #454545;
+  border: 0.0625rem solid #B7B7B7;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in, opacity 0.3s ease-in;
+}
+.btn__login:hover, .btn__login:focus {
+  background-color: #181818;
+  color: #fff;
+  opacity: 0.5;
+}
+.btn__signup {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #B7B7B7;
+  background-color: #181818;
+  color: #fff;
+  transition: opacity 0.3s ease-in;
+}
+.btn__signup:hover, .btn__signup:focus {
+  opacity: 0.5;
 }
