@@ -1,9 +1,12 @@
 :root {
   --font-family: "Circular", sans-serif;
-  --content-width: 1170px;
+  --content-width: 1230px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-  --light-color: #fff;
+  --page-bg: #fff;
+  --text-color: #181818;
+  --text-muted: #909090;
+  --accent: #35AFF4;
 }
 
 /* stylelint-disable */
@@ -49,6 +52,7 @@
 }
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -61,6 +65,8 @@ html {
   height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .page__body {
@@ -85,7 +91,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -149,4 +156,13 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.dark {
+  --page-bg: #252526;
+  --text-color: #fff;
+}
+
+.header {
+  padding: 16px 0;
 }
