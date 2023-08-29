@@ -170,6 +170,44 @@ a {
   --text-color: #fff;
 }
 
+.title {
+  color: var(--text-color);
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.title--decor {
+  position: relative;
+}
+.title--decor::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 268px;
+  height: 24px;
+  z-index: -1;
+  background-image: url("./../img/discover/underline.svg");
+  background-repeat: no-repeat;
+}
+
+.text {
+  color: var(--text-muted);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 150%;
+  /* 27px */
+}
+.text p + p {
+  margin-top: 1em;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
 .header {
   padding: 1.5rem 0;
 }
@@ -241,4 +279,33 @@ a {
 }
 .btn__signup:hover, .btn__signup:focus {
   opacity: 0.5;
+}
+
+.discover {
+  padding: 60px 0;
+}
+.discover__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.discover__title {
+  margin-bottom: 24px;
+}
+.discover__text {
+  margin-bottom: 40px;
+}
+.discover__picture {
+  position: relative;
+}
+.discover__picture-hint {
+  position: absolute;
+  top: 90px;
+  left: 40px;
+}
+.discover__picture-scroll {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
 }
