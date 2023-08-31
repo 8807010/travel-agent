@@ -16,6 +16,21 @@
     font-weight: 900;
     white-space: nowrap;
     width: max-content;
+
+    img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: 1px solid #1e61f2;
+      outline-offset: 2px;
+    }
+
+    @include hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
   }
 
   &__btn {

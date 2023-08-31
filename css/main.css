@@ -226,6 +226,18 @@ a {
   white-space: nowrap;
   width: max-content;
 }
+.header__logo img {
+  transition: transform 0.3s ease-in-out;
+}
+.header__logo:focus {
+  outline: 1px solid #1e61f2;
+  outline-offset: 2px;
+}
+@media (any-hover: hover) {
+  .header__logo:hover img {
+    transform: scale(1.2);
+  }
+}
 .header__btn {
   justify-self: end;
 }
@@ -239,13 +251,23 @@ a {
   color: var(--text-color);
   font-weight: 450;
   line-height: 1.5;
+  outline: none;
 }
 .nav__item a {
   color: inherit;
   transition: color 0.3s ease-in-out;
 }
-.nav__item a:hover, .nav__item a.active {
-  color: #35AFF4;
+.nav__item a.active {
+  color: var(--accent);
+}
+.nav__item a:focus {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+@media (any-hover: hover) {
+  .nav__item:hover {
+    color: var(--accent);
+  }
 }
 
 .btn {
