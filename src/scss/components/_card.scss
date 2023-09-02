@@ -1,0 +1,61 @@
+.card {
+  &__img {
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+
+    img {
+      width: 100%;
+      border-radius: 0.75rem;
+    }
+  }
+
+  &__title-wrapper {
+    margin-bottom: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1.0625rem;
+      height: 1rem;
+      background-image: url('./../img/icons/star-small.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__price {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 450;
+    line-height: 1.5;
+
+    span {
+      color: var(--text-color);
+    }
+
+    i {
+      color: var(--accent);
+      font-style: normal;
+    }
+  }
+}
