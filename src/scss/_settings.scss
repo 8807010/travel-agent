@@ -88,6 +88,14 @@ a {
   max-width: var(--container-width);
 }
 
+.container-right {
+  padding-left: calc((100% - var(--container-width)) / 2 + var(--container-offset));
+
+  // @media (max-width: var(--laptop-size)) {
+  //   padding-left: var(--container-padding);
+  // }
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
