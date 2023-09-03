@@ -289,10 +289,22 @@ a {
   border-radius: 0.5rem;
   transition: background-color 0.3s ease-in, color 0.3s ease-in, opacity 0.3s ease-in;
 }
-.btn__login:hover, .btn__login:focus {
+.btn__login:focus {
   background-color: #181818;
   color: #fff;
   opacity: 0.5;
+  outline: 0.0625rem solid var(--accent);
+  outline-offset: 0.125rem;
+}
+@media (any-hover: hover) {
+  .btn__login:hover {
+    background-color: #181818;
+    color: #fff;
+    opacity: 0.5;
+  }
+}
+.btn__login:active {
+  transform: scale(1.05);
 }
 .btn__signup {
   padding: 0.5rem 1.25rem;
@@ -302,8 +314,18 @@ a {
   color: #fff;
   transition: opacity 0.3s ease-in;
 }
-.btn__signup:hover, .btn__signup:focus {
+.btn__signup:focus {
   opacity: 0.5;
+  outline: 0.0625rem solid var(--accent);
+  outline-offset: 0.125rem;
+}
+@media (any-hover: hover) {
+  .btn__signup:hover {
+    opacity: 0.5;
+  }
+}
+.btn__signup:active {
+  transform: scale(1.05);
 }
 
 .discover {

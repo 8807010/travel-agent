@@ -14,11 +14,22 @@
     border-radius: 0.5rem;
     transition: background-color .3s ease-in, color .3s ease-in, opacity .3s ease-in;
 
-    &:hover,
     &:focus {
       background-color: #181818;
       color: #fff;
       opacity: 0.5;
+      outline: 0.0625rem solid var(--accent);
+      outline-offset: 0.125rem;
+    }
+
+    @include hover {
+      background-color: #181818;
+      color: #fff;
+      opacity: 0.5;
+    }
+
+    &:active {
+      transform: scale(1.05);
     }
   }
 
@@ -30,9 +41,18 @@
     color: #fff;
     transition: opacity .3s ease-in;
 
-    &:hover,
     &:focus {
       opacity: 0.5;
+      outline: 0.0625rem solid var(--accent);
+      outline-offset: 0.125rem;
+    }
+
+    @include hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      transform: scale(1.05);
     }
   }
 }
