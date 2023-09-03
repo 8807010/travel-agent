@@ -1,0 +1,46 @@
+.card-review {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  align-self: stretch;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0rem 0.25rem 0.625rem 0rem rgba(23, 28, 31, 0.23);
+
+  &__rating {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  &__text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 450;
+    line-height: 1.5;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__author-img {
+    border-radius: 6.25rem;
+  }
+
+  &__author-name {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &__author-role {
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 1.5;
+  }
+}

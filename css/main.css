@@ -1435,6 +1435,12 @@ button.swiper-pagination-bullet {
 .card__img img {
   width: 100%;
   border-radius: 0.75rem;
+  transition: transform 0.2s ease-in-out;
+}
+@media (any-hover: hover) {
+  .card__img img:hover {
+    transform: scale(1.1);
+  }
 }
 .card__title-wrapper {
   margin-bottom: 0.25rem;
@@ -1477,4 +1483,82 @@ button.swiper-pagination-bullet {
 .card__price i {
   color: var(--accent);
   font-style: normal;
+}
+
+.testimonials__grid {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.testimonials__col {
+  display: grid;
+  gap: 2rem;
+  animation: slideUp 20s linear infinite;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-50%);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  97% {
+    transform: translateY(-50%);
+    opacity: 0;
+    filter: blur(0.625rem);
+  }
+  98% {
+    transform: translateY(0%);
+    opacity: 0;
+    filter: blur(0.625rem);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+.card-review {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  align-self: stretch;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0rem 0.25rem 0.625rem 0rem rgba(23, 28, 31, 0.23);
+}
+.card-review__rating {
+  display: flex;
+  gap: 0.25rem;
+}
+.card-review__text {
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: 1.5;
+}
+.card-review__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card-review__author-img {
+  border-radius: 6.25rem;
+}
+.card-review__author-name {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.card-review__author-role {
+  color: var(--text-muted);
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 1.5;
 }
