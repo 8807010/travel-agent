@@ -1,10 +1,31 @@
 .header {
   padding: 1.5rem 0;
 
+  &--position {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+  }
+
+  &__burger {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-self: end;
+    }
+  }
+
   &__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr auto;
+    }
   }
 
   &__logo {
@@ -16,6 +37,11 @@
     font-weight: 900;
     white-space: nowrap;
     width: max-content;
+
+    @include mobile {
+      width: 1.25rem;
+      overflow: hidden;
+    }
 
     img {
       transition: transform 0.3s ease-in-out;
@@ -35,5 +61,14 @@
 
   &__btn {
     justify-self: end;
+
+    @include tablet {
+      padding: 0 0.9375rem;
+    }
   }
+}
+
+
+.burger {
+  @include burger
 }

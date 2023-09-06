@@ -10,9 +10,13 @@
     background-color: #fff;
     color: #454545;
     border: 0.0625rem solid #B7B7B7;
-    padding: 0.5rem 1.25rem;
+    padding: 8px 20px;
     border-radius: 0.5rem;
     transition: background-color .3s ease-in, color .3s ease-in, opacity .3s ease-in;
+
+    @include mobile {
+      padding: 6px 10px;
+    }
 
     &:focus {
       background-color: #181818;
@@ -34,12 +38,16 @@
   }
 
   &__signup {
-    padding: 0.5rem 1.25rem;
+    padding: 8px 20px;
     border-radius: 0.5rem;
     border: 0.0625rem solid #B7B7B7;
     background-color: #181818;
     color: #fff;
     transition: opacity .3s ease-in;
+
+    @include mobile {
+      padding: 6px 10px;
+    }
 
     &:focus {
       opacity: 0.5;
