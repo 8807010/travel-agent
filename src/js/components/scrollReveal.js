@@ -14,18 +14,14 @@ ScrollReveal().reveal(`.discover__picture-hint, .discover__title`, {
 });
 
 ScrollReveal().reveal(
-  `.discover__picture-scroll, .discover__text, .popular__controls`,
-  {
-    origin: 'right',
-  }
-);
+  `.discover__picture-scroll, .discover__text, .popular__controls`, {
+  origin: 'right',
+});
 
 ScrollReveal().reveal(`.discover__form, .discover__picture-img`, {
   origin: 'bottom',
 });
 
-ScrollReveal().reveal(`.card__img`, {
+ScrollReveal().reveal(`.container-right`, {
   origin: 'right',
-  delay: 375,
-
 });
