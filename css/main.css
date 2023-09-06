@@ -146,6 +146,7 @@ a {
 
 .container-right {
   padding-left: calc((100% - var(--container-width)) / 2 + var(--container-offset));
+  padding-right: 1rem;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -1514,48 +1515,23 @@ button.swiper-pagination-bullet {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-.testimonials__col {
-  display: grid;
-  gap: 2rem;
-  animation: slideUp 20s linear infinite;
+.testimonials__swiper {
+  height: 56.25rem;
 }
-.testimonials__col:nth-child(1) {
-  padding-top: 100px;
-}
-.testimonials__col:nth-child(2) {
-  padding-top: 180px;
-}
-.testimonials__col:nth-child(3) {
-  padding-top: 50px;
+.testimonials__swiper .swiper-slide {
+  padding: 0;
+  margin: 0;
+  height: max-content !important;
 }
 
-@keyframes slideUp {
-  0% {
-    transform: translateY(0%);
-  }
-  95% {
-    transform: translateY(-50%);
-    opacity: 1;
-    filter: blur(0px);
-  }
-  97% {
-    transform: translateY(-50%);
-    opacity: 0;
-    filter: blur(0.625rem);
-  }
-  98% {
-    transform: translateY(0%);
-    opacity: 0;
-    filter: blur(0.625rem);
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-    filter: blur(0px);
-  }
+.smooth-transition {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
 }
+
 .card-review {
-  padding: 1.625rem;
+  padding: 2rem;
   margin: 0.375rem;
   display: flex;
   flex-direction: column;
@@ -1564,7 +1540,7 @@ button.swiper-pagination-bullet {
   align-self: stretch;
   border-radius: 0.5rem;
   background: #fff;
-  box-shadow: 0px 4px 10px 0px rgba(23, 28, 31, 0.23);
+  box-shadow: 0px 0.25rem 0.625rem 0px rgba(23, 28, 31, 0.23);
 }
 .card-review__rating {
   display: flex;
@@ -1575,6 +1551,7 @@ button.swiper-pagination-bullet {
   font-size: 1rem;
   font-weight: 450;
   line-height: 1.5;
+  margin: 0;
 }
 .card-review__author {
   display: flex;
@@ -1588,12 +1565,14 @@ button.swiper-pagination-bullet {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
+  margin: 0;
 }
 .card-review__author-role {
   color: var(--text-muted);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 450;
   line-height: 1.5;
+  margin: 0;
 }
 
 .subscribe {
