@@ -23,3 +23,9 @@ ScrollReveal().reveal(
 ScrollReveal().reveal(`.discover__form, .discover__picture-img`, {
   origin: 'bottom',
 });
+
+ScrollReveal().reveal(`.card__img`, {
+  origin: 'right',
+  delay: 375,
+
+});
