@@ -1,8 +1,8 @@
 .discover {
-  padding: 60px 0;
+  padding: 3.75rem 0;
 
   @include tablet {
-    padding: 30px 0;
+    padding: 1.875rem 0;
   }
 
   @include mobile {
@@ -12,11 +12,11 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 5rem;
     align-items: center;
 
     @include tablet {
-      gap: 30px;
+      gap: 1.875rem;
     }
 
     @include small-tablet {
@@ -26,14 +26,14 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 
   &__text:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 
     @include tablet {
-      margin-bottom: 25px;
+      margin-bottom: 1.5625rem;
     }
 
     & p {
@@ -57,34 +57,29 @@
 
   &__picture-hint {
     position: absolute;
-    // top: 90px;
-    // left: 40px;
     z-index: 2;
-
-
     top: 10.06%;
     left: 7.14%;
   }
 
   &__picture-scroll {
     position: absolute;
-    right: 15px;
-    bottom: 20px;
+    right: 0.9375rem;
+    bottom: 1.25rem;
     width: 25%;
 
     @include for-container {
       right: 0px;
       bottom: 0px;
     }
-
   }
 }
 
 .picture-hint {
   display: flex;
-  padding: 12px;
+  padding: 0.75rem;
   gap: 1rem;
-  max-width: 324px;
+  max-width: 20.25rem;
   border-radius: 0.75rem;
   background: #fff;
   box-shadow: 0 0.25rem 2.125rem 0 rgba(50, 75, 104, 0.17);
@@ -92,7 +87,7 @@
 
   @include mobile {
     max-width: max-content;
-    padding: 6px;
+    padding: 0.375rem;
   }
 
   &__img {
@@ -101,9 +96,8 @@
     flex-shrink: 0;
 
     @include mobile {
-      width: 50px;
+      width: 3.125rem;
     }
-
   }
 
   &__desc {
@@ -117,12 +111,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.5;
 
     @include mobile {
-      font-size: 12px;
+      font-size: 0.75rem;
     }
   }
 
@@ -131,13 +125,13 @@
     justify-content: flex-end;
     align-items: center;
     gap: 0.25rem;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 1;
     margin-left: 10px;
 
     @include mobile {
-      font-size: 10px;
+      font-size: 0.625rem;
     }
 
     &::before {
@@ -155,7 +149,7 @@
     line-height: 1.5;
 
     @include mobile {
-      font-size: 10px;
+      font-size: 0.625rem;
     }
 
     i {

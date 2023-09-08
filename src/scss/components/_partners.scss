@@ -1,11 +1,24 @@
 .partners {
   padding: 3.75rem 0;
 
+  @include tablet {
+    padding: 1.875rem 0;
+  }
+
+  @include mobile {
+    padding-top: 0;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1.875rem;
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   &__title {
@@ -14,11 +27,18 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.4;
+
+
+    @include small-tablet {
+      font-size: 1.25rem;
+    }
   }
 
   &__content {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

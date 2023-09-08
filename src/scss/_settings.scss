@@ -92,7 +92,6 @@ a {
   padding-left: calc((100% - var(--container-width)) / 2 + var(--container-offset));
   padding-right: 1rem;
 
-
   @include for-container {
     padding-left: 15px;
   }
@@ -119,7 +118,6 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
-
 
 .dark {
   --page-bg: #252526;
