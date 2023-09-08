@@ -1,5 +1,5 @@
 .form {
-  padding: 0.75rem 1rem;
+  padding: 12px 16px;
   border-radius: 1rem;
   border: 0.0625rem solid rgba(144, 144, 144, 0.30);
   display: grid;
@@ -7,10 +7,22 @@
   align-items: center;
   gap: 1rem;
 
+  @include for-container {
+    padding: 10px;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
   &__devider {
     height: 1.5rem;
     width: 0.0625rem;
     background: #909090;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__label {
@@ -42,6 +54,9 @@
   }
 
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--accent);
     padding: 0.75rem;
     border-radius: 0.625rem;

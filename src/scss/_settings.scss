@@ -92,9 +92,10 @@ a {
   padding-left: calc((100% - var(--container-width)) / 2 + var(--container-offset));
   padding-right: 1rem;
 
-  // @media (max-width: var(--laptop-size)) {
-  //   padding-left: var(--container-padding);
-  // }
+
+  @include for-container {
+    padding-left: 15px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -132,6 +133,10 @@ a {
   font-weight: 700;
   line-height: normal;
 
+  @include tablet {
+    font-size: 36px;
+  }
+
   &--decor {
     position: relative;
   }
@@ -141,19 +146,29 @@ a {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 16.75rem;
-    height: 1.5rem;
+    width: 268px;
+    height: 24px;
     z-index: -1;
     background-image: url('./../img/discover/underline.svg');
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @include tablet {
+      width: 134px;
+      height: 12px;
+    }
   }
 }
 
 .text p {
   color: var(--text-muted);
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 450;
   line-height: 1.5;
+
+  @include tablet {
+    font-size: 16px;
+  }
 
   p+p {
     margin-top: 1em;

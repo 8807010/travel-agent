@@ -1,20 +1,40 @@
 .discover {
-  padding: 3.75rem 0;
+  padding: 60px 0;
+
+  @include tablet {
+    padding: 30px 0;
+  }
+
+  @include mobile {
+    padding-top: 0;
+  }
 
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
+
+    @include tablet {
+      gap: 30px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
     margin: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
 
   &__text:not(:last-child) {
-    margin-bottom: 2.5rem;
+    margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
 
     & p {
       margin: 0;
@@ -37,45 +57,73 @@
 
   &__picture-hint {
     position: absolute;
-    top: 5.625rem;
-    left: 2.5rem;
+    // top: 90px;
+    // left: 40px;
     z-index: 2;
+
+
+    top: 10.06%;
+    left: 7.14%;
   }
 
   &__picture-scroll {
     position: absolute;
-    right: 0.9375rem;
-    bottom: 1.25rem;
+    right: 15px;
+    bottom: 20px;
+    width: 25%;
+
+    @include for-container {
+      right: 0px;
+      bottom: 0px;
+    }
+
   }
 }
 
 .picture-hint {
   display: flex;
-  padding: 0.75rem;
+  padding: 12px;
   gap: 1rem;
-  max-width: 20.25rem;
+  max-width: 324px;
   border-radius: 0.75rem;
   background: #fff;
   box-shadow: 0 0.25rem 2.125rem 0 rgba(50, 75, 104, 0.17);
   width: 100%;
 
+  @include mobile {
+    max-width: max-content;
+    padding: 6px;
+  }
+
   &__img {
     border-radius: 0.5rem;
     overflow: hidden;
     flex-shrink: 0;
+
+    @include mobile {
+      width: 50px;
+    }
+
   }
 
   &__desc {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   &__title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__rating {
@@ -83,9 +131,14 @@
     justify-content: flex-end;
     align-items: center;
     gap: 0.25rem;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1;
+    margin-left: 10px;
+
+    @include mobile {
+      font-size: 10px;
+    }
 
     &::before {
       content: '';
@@ -100,6 +153,10 @@
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
+
+    @include mobile {
+      font-size: 10px;
+    }
 
     i {
       color: var(--accent);

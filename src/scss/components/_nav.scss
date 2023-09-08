@@ -8,7 +8,7 @@
     top: 0;
     z-index: 100;
     overflow-y: auto;
-    padding: 50px;
+    padding: 100px 50px 30px;
     width: 80%;
     height: 100vh;
     background-color: var(--accent);
@@ -31,6 +31,7 @@
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
+      row-gap: 20px;
     }
   }
 
@@ -39,6 +40,12 @@
     font-weight: 450;
     line-height: 1.5;
     outline: none;
+
+    @include tablet {
+      color: var(--text-white);
+      font-size: 30px;
+
+    }
 
     & a {
       color: inherit;

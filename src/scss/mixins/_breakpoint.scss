@@ -12,6 +12,12 @@
   }
 }
 
+@mixin for-container {
+  @media (max-width: (1250px)) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: (1024px)) {
     @content;
