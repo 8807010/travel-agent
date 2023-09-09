@@ -2078,6 +2078,16 @@ button.swiper-pagination-bullet {
   background: #181818;
   color: var(--text-white);
 }
+@media (max-width: 1024px) {
+  .footer {
+    padding: 2.5rem 0;
+  }
+}
+@media (max-width: 576px) {
+  .footer {
+    padding: 1.25rem 0;
+  }
+}
 .footer__logo {
   display: flex;
   align-items: center;
@@ -2106,6 +2116,12 @@ button.swiper-pagination-bullet {
   align-items: start;
   gap: 8rem;
 }
+@media (max-width: 768px) {
+  .footer__row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
 .footer__copyright {
   display: grid;
   gap: 1.5rem;
@@ -2121,6 +2137,12 @@ button.swiper-pagination-bullet {
   grid-template-columns: 1fr 1fr;
   align-items: start;
   gap: 2.5rem;
+}
+@media (max-width: 768px) {
+  .footer__nav {
+    grid-row: -1/1;
+    gap: 1.25rem;
+  }
 }
 
 .footer-nav {

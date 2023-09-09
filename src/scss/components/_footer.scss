@@ -3,6 +3,14 @@
   background: #181818;
   color: var(--text-white);
 
+  @include tablet {
+    padding: 2.5rem 0;
+  }
+
+  @include mobile {
+    padding: 1.25rem 0;
+  }
+
   &__logo {
     display: flex;
     align-items: center;
@@ -34,6 +42,11 @@
     grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: 8rem;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
   }
 
   &__copyright {
@@ -54,6 +67,11 @@
     grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: 2.5rem;
+
+    @include small-tablet {
+      grid-row: -1 / 1;
+      gap: 1.25rem;
+    }
   }
 }
 
