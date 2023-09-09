@@ -865,12 +865,23 @@ a {
   display: flex;
   align-items: center;
   column-gap: 2rem;
+  row-gap: 0.625rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .popular {
   padding: 3.75rem 0;
+}
+@media (max-width: 1024px) {
+  .popular {
+    padding: 1.875rem 0;
+  }
+}
+@media (max-width: 576px) {
+  .popular {
+    padding-top: 0;
+  }
 }
 .popular__top {
   margin-bottom: 2rem;
@@ -879,17 +890,46 @@ a {
   align-items: center;
   gap: 1.875rem;
 }
+@media (max-width: 768px) {
+  .popular__top {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .popular__desc {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+}
 .popular__title {
   color: var(--text-color);
   font-size: 2.25rem;
   font-weight: 500;
   margin: 0;
 }
+@media (max-width: 1024px) {
+  .popular__title {
+    font-size: 1.5rem;
+  }
+}
 .popular__title:not(:last-child) {
   margin-bottom: 1rem;
 }
+@media (max-width: 1024px) {
+  .popular__title:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+}
 .popular__text p {
   margin: 0;
+}
+@media (max-width: 1024px) {
+  .popular__text p {
+    font-size: 14px;
+  }
 }
 .popular__controls {
   display: flex;
@@ -1745,6 +1785,11 @@ button.swiper-pagination-bullet {
   line-height: 1.5;
   margin: 0;
 }
+@media (max-width: 1024px) {
+  .card__title {
+    font-size: 1rem;
+  }
+}
 .card__rating {
   display: flex;
   align-items: center;
@@ -1752,6 +1797,11 @@ button.swiper-pagination-bullet {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .card__rating {
+    font-size: 0.75rem;
+  }
 }
 .card__rating::before {
   content: "";
@@ -1766,6 +1816,11 @@ button.swiper-pagination-bullet {
   font-size: 1rem;
   font-weight: 450;
   line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .card__price {
+    font-size: 0.875rem;
+  }
 }
 .card__price span {
   color: var(--text-color);
