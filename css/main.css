@@ -875,7 +875,7 @@ a {
 }
 @media (max-width: 1024px) {
   .popular {
-    padding: 1.875rem 0;
+    padding: 1.875rem 0 0;
   }
 }
 @media (max-width: 576px) {
@@ -1841,14 +1841,34 @@ button.swiper-pagination-bullet {
 }
 .testimonials__swiper .swiper-slide {
   padding: 0;
+  padding-bottom: 2rem;
   margin: 0;
   height: max-content !important;
+}
+@media (max-width: 1024px) {
+  .testimonials__swiper {
+    display: none;
+  }
 }
 
 .smooth-transition {
   -webkit-transition-timing-function: linear !important;
   -o-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
+}
+
+.testimonials-horizontal {
+  display: none;
+}
+.testimonials-horizontal .swiper {
+  padding: 30px 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .testimonials-horizontal {
+    display: block;
+  }
 }
 
 .card-review {
