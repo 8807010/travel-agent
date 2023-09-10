@@ -15,10 +15,15 @@
   &__row {
     position: relative;
     padding-left: 11.25rem;
+    padding-right: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1.875rem;
+
+    @include big-desktop {
+      padding-right: 0;
+    }
 
     @include tablet {
       padding: 0 150px;

@@ -51,6 +51,11 @@
     &::placeholder {
       color: var(--text-muted);
     }
+
+    &:focus {
+      outline: 1px solid #1e61f2;
+      outline-offset: 2px;
+    }
   }
 
   &__btn {
