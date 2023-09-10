@@ -52,9 +52,9 @@ const breakpointChecker = function () {
     if (swiper3 !== undefined) swiper3.destroy(true, true);
     return;
   } else if (breakpoint.matches === false) {
-    swiper1 = new Swiper('#testimonials-col-1', configVertical);
-    swiper2 = new Swiper('#testimonials-col-2', configVertical);
-    swiper3 = new Swiper('#testimonials-col-3', configVertical);
+    swiper1 = new Swiper('#testimonials-col-1', configVertical, configVertical.speed = 3000);
+    swiper2 = new Swiper('#testimonials-col-2', configVertical, configVertical.speed = 2000);
+    swiper3 = new Swiper('#testimonials-col-3', configVertical, configVertical.speed = 4000);
     if (swiperHorizontal !== undefined) swiperHorizontal.destroy(true, true);
     return;
   }
