@@ -41,15 +41,12 @@
       content: '';
       position: absolute;
       left: -80px;
-      top: -110px;
+      top: 50%;
       width: 236px;
       height: 273px;
       background-image: url('./../img/subscribe/subscribe-pin-bg.svg');
       background-repeat: no-repeat;
-
-      @include tablet {
-        top: -40px;
-      }
+      transform: translateY(-50%);
 
       @include small-tablet {
         display: none;
