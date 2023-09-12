@@ -5,23 +5,19 @@ ScrollReveal({
   duration: 2800,
 });
 
-ScrollReveal().reveal(`.header, .partners, .popular__title`, {
+ScrollReveal().reveal(`.header, .popular__desc`, {
   origin: 'top',
 });
 
-ScrollReveal().reveal(`.discover__picture-hint, .discover__title`, {
+ScrollReveal().reveal(`.discover__picture-hint, .discover__title, .service__picture`, {
   origin: 'left',
 });
 
 ScrollReveal().reveal(
-  `.discover__picture-scroll, .discover__text, .popular__controls`, {
+  `.discover__picture-scroll, .discover__text, .popular__controls, .container-right, .service__desc`, {
   origin: 'right',
 });
 
-ScrollReveal().reveal(`.discover__form, .discover__picture-img`, {
+ScrollReveal().reveal(`.partners, .discover__form, .discover__picture-img, .testimonials`, {
   origin: 'bottom',
-});
-
-ScrollReveal().reveal(`.container-right`, {
-  origin: 'right',
 });
