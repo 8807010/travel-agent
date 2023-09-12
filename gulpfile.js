@@ -34,6 +34,15 @@ const path = require('path');
 const zip = require('gulp-zip');
 const rootFolder = path.basename(path.resolve());
 
+//deploy
+const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+  return gulp.src('./app/**/*')
+    .pipe(ghPages());
+});
+
 // paths
 const srcFolder = './src';
 const buildFolder = './app';
@@ -267,8 +276,8 @@ const watchFiles = () => {
 
 const cache = () => {
   return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2}`, {
-      base: buildFolder
-    })
+    base: buildFolder
+  })
     .pipe(rev())
     .pipe(revDel())
     .pipe(dest(buildFolder))
