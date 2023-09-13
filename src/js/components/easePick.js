@@ -1,6 +1,5 @@
 import { easepick, TimePlugin } from '@easepick/bundle';
 
-
 const picker = new easepick.create({
   element: document.getElementById('datePicker'),
   css: [
