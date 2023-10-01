@@ -969,6 +969,7 @@ a {
 }
 .popular__control.swiper-button-disabled {
   opacity: 0.3;
+  cursor: default;
 }
 @media (any-hover: hover) {
   .popular__control:hover {
