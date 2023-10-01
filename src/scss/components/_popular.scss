@@ -91,12 +91,22 @@
       outline-offset: 0.125rem;
     }
 
+    &.swiper-button-disabled {
+      opacity: 0.3;
+    }
+
     @include hover {
       background-color: var(--accent);
       fill: #fff;
 
       &.popular__control {
         border: none;
+      }
+
+      &.swiper-button-disabled {
+        background-color: #fff;
+        fill: #B9B9B9;
+        border: 0.0625rem solid #B9B9B9;
       }
     }
 

@@ -967,6 +967,9 @@ a {
   outline: 0.0625rem solid #1e61f2;
   outline-offset: 0.125rem;
 }
+.popular__control.swiper-button-disabled {
+  opacity: 0.3;
+}
 @media (any-hover: hover) {
   .popular__control:hover {
     background-color: var(--accent);
@@ -974,6 +977,11 @@ a {
   }
   .popular__control:hover.popular__control {
     border: none;
+  }
+  .popular__control:hover.swiper-button-disabled {
+    background-color: #fff;
+    fill: #B9B9B9;
+    border: 0.0625rem solid #B9B9B9;
   }
 }
 .popular__control:active {
@@ -2163,6 +2171,7 @@ button.swiper-pagination-bullet {
 }
 .card-review__author-img {
   border-radius: 6.25rem;
+  overflow: hidden;
 }
 .card-review__author-name {
   font-size: 1rem;
