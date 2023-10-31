@@ -1,5 +1,7 @@
 .partners {
   padding: 3.75rem 0;
+  position: relative;
+  z-index: -1;
 
   @include tablet {
     padding: 1.875rem 0;
@@ -17,7 +19,7 @@
 
     @include small-tablet {
       flex-direction: column;
-      gap: 15px;
+      gap: 0.9375rem;
     }
   }
 
